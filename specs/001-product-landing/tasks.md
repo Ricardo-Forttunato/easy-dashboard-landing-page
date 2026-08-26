@@ -32,15 +32,15 @@ foundations.
 
 **⚠️ CRITICAL**: Complete this phase before beginning a user-story phase.
 
-- [ ] T008 Create the application entry point and semantic page shell in src/main.tsx and src/App.tsx
-- [ ] T009 [P] Define accessible MUI theme tokens, color contrast, typography, breakpoints, and focus styles in src/theme/theme.ts
-- [ ] T010 [P] Define Portuguese and English static dictionaries in src/locales/pt.ts and src/locales/en.ts
-- [ ] T011 Configure browser-language detection, Portuguese fallback, and i18next provider in src/locales/i18n.ts and src/main.tsx
-- [ ] T012 [P] Create shared semantic layout, skip link, header, footer, and focus behavior in src/components/layout/SiteLayout.tsx and src/components/layout/SiteLayout.test.tsx
-- [ ] T013 [P] Create reusable accessible section, button, and status-message primitives in src/components/ui/Section.tsx, src/components/ui/PrimaryCta.tsx, and src/components/ui/StatusMessage.tsx
-- [ ] T014 Implement localized semantic SEO, Open Graph, and Schema.org metadata configuration in src/lib/seo.ts and src/App.tsx
-- [ ] T015 Document product-data versus contact-data boundaries and approved third parties in src/content/privacy.ts
-- [ ] T016 Create shared rendering helpers with MUI and i18n providers in src/test/render.tsx
+- [X] T008 Create the application entry point and semantic page shell in src/main.tsx and src/App.tsx
+- [X] T009 [P] Define accessible MUI theme tokens, color contrast, typography, breakpoints, and focus styles in src/theme/theme.ts
+- [X] T010 [P] Define Portuguese and English static dictionaries in src/locales/pt.ts and src/locales/en.ts
+- [X] T011 Configure browser-language detection, Portuguese fallback, and i18next provider in src/locales/i18n.ts and src/main.tsx
+- [X] T012 [P] Create shared semantic layout, skip link, header, footer, and focus behavior in src/components/layout/SiteLayout.tsx and src/components/layout/SiteLayout.test.tsx
+- [X] T013 [P] Create reusable accessible section, button, and status-message primitives in src/components/ui/Section.tsx, src/components/ui/PrimaryCta.tsx, and src/components/ui/StatusMessage.tsx
+- [X] T014 Implement localized semantic SEO, Open Graph, and Schema.org metadata configuration in src/lib/seo.ts and src/App.tsx
+- [X] T015 Document product-data versus contact-data boundaries and approved third parties in src/content/privacy.ts
+- [X] T016 Create shared rendering helpers with MUI and i18n providers in src/test/render.tsx
 
 **Checkpoint**: Foundation supports responsive, localized, accessible stories without transmitting
 dashboard data.

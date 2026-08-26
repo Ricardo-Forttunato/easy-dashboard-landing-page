@@ -1,50 +1,92 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report
+- Version change: template (unversioned) -> 1.0.0
+- Modified principles: none; initial constitution established.
+- Added sections: Core Principles, Product and Privacy Constraints, Development Workflow and
+  Quality Gates, and Governance.
+- Removed sections: none.
+- Follow-up TODOs: none.
+-->
+# EasyDashboard Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Clean, SOLID, and Intentional Design
+Production code MUST have a single, clear responsibility and use explicit boundaries between
+presentation, domain logic, and infrastructure. Components and modules MUST be cohesive,
+independently testable, and depend on abstractions at integration boundaries. Duplication,
+implicit side effects, speculative abstractions, and unnecessary complexity MUST be removed or
+justified in review. This keeps a B2B product trustworthy, maintainable, and adaptable.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Test-Driven Quality for Critical Paths
+Changes to critical components MUST follow Red-Green-Refactor: write a failing test, implement
+the smallest passing change, then refactor. Critical paths include the primary CTA, navigation,
+interactive feature demonstrations, file-selection and client-side parsing boundaries, privacy
+guarantees, and accessibility interactions. Unit and component tests MUST cover their expected,
+error, and keyboard-accessible states; regressions MUST receive a reproducing test.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Privacy by Design and LGPD Compliance
+EasyDashboard MUST process manual inputs and uploaded files entirely in the browser. Raw inputs,
+uploaded file contents, derived datasets, and chart data MUST NOT be transmitted to external APIs,
+analytics providers, or application servers, and MUST NOT be persisted in browser or server
+storage unless the user explicitly requests a future, separately specified local-only capability.
+Any telemetry MUST be anonymous, minimized, disclosed, and incapable of collecting personal or
+raw dashboard data. Features MUST document their data flow and satisfy LGPD purpose limitation,
+data minimization, transparency, and security requirements.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Accessible Mobile-First Experience
+Every interface MUST be designed mobile-first and remain responsive without loss of content or
+functionality across supported viewport sizes. It MUST conform to WCAG 2.1 AA, including
+semantic markup, sufficient contrast, visible focus, text alternatives, accessible names and
+status announcements, and 100% keyboard-operable behavior. Screen-reader and high-contrast use
+MUST be considered an acceptance criterion, not a post-release enhancement.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Clear Value and Measurable Engagement
+The above-the-fold experience MUST state the EasyDashboard value proposition, emphasize that data
+remains local, and expose a prominent, unambiguous primary CTA. The landing page MUST include an
+accessible interactive or visual presentation of core capabilities that helps visitors understand
+the product without uploading sensitive data. Engagement elements MUST preserve performance,
+privacy, user control, and accessibility; decorative motion MUST respect reduced-motion settings.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Product and Privacy Constraints
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+EasyDashboard is a B2B landing page for a browser-based product that creates charts from manual
+input or uploaded files. Product claims, demonstrations, and UI copy MUST accurately describe
+client-side processing and must not imply that raw customer data is retained, analyzed remotely,
+or shared.
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+The page MUST use semantic SEO: one descriptive primary heading, a logical heading hierarchy,
+descriptive links, crawlable content, and meaningful page titles and meta descriptions. Every
+public page MUST provide accurate Open Graph metadata and appropriate Schema.org structured data;
+structured-data claims MUST match visible content. Third-party scripts, fonts, embeds, and assets
+MUST be reviewed for data collection, accessibility, performance, and legal implications before
+use.
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+## Development Workflow and Quality Gates
+
+Each change MUST define acceptance criteria for responsive behavior, accessibility, privacy, SEO,
+and relevant critical-path tests before implementation. Code review MUST verify SOLID and Clean
+Code boundaries, test evidence, keyboard navigation, screen-reader semantics, contrast, and that
+no raw input or upload data crosses the browser boundary.
+
+Before release, the team MUST run the applicable automated tests and validate critical flows on a
+small viewport and a desktop viewport. Automated accessibility checks complement, but MUST NOT
+replace, manual keyboard and assistive-technology verification. SEO metadata and Schema.org
+markup MUST be validated whenever public content or page structure changes. A privacy-impact
+review is mandatory for every new integration, storage mechanism, analytics event, upload path,
+or data-processing change.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes conflicting implementation preferences and project practices.
+Proposed amendments MUST document the affected principles, rationale, compatibility impact,
+required migration work, and semantic version bump. Maintainers approve amendments only after
+reviewing their effect on privacy, accessibility, quality, and the B2B product promise.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+Constitution versions follow semantic versioning: MAJOR for removed or incompatible governance,
+MINOR for added principles or materially stronger requirements, and PATCH for clarifications that
+do not change obligations. Every feature specification, plan, task list, pull request, and release
+review MUST include an explicit compliance check against this constitution. Non-compliance requires
+a documented, time-bounded exception approved by maintainers before merge or release.
+
+**Version**: 1.0.0 | **Ratified**: 2026-08-25 | **Last Amended**: 2026-08-25

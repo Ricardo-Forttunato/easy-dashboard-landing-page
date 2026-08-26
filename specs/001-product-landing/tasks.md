@@ -112,15 +112,15 @@ data remains local, which minimal contact data is sent, and how to exercise priv
 
 ### Tests for User Story 3
 
-- [ ] T035 [P] [US3] Write failing content and accessible-link tests for local-processing and contact-data disclosures in src/features/privacy/PrivacyTrust.test.tsx
-- [ ] T036 [P] [US3] Write failing Playwright keyboard journey for privacy/legal links and disclosures in tests/e2e/privacy.spec.ts
+- [X] T035 [P] [US3] Write failing content and accessible-link tests for local-processing and contact-data disclosures in src/features/privacy/PrivacyTrust.test.tsx
+- [X] T036 [P] [US3] Write failing Playwright keyboard journey for privacy/legal links and disclosures in tests/e2e/privacy.spec.ts
 
 ### Implementation for User Story 3
 
-- [ ] T037 [US3] Create localized privacy, processor, retention, transfer, and LGPD-rights content in src/features/privacy/privacyContent.ts
-- [ ] T038 [US3] Implement accessible privacy/trust section and legal-information links in src/features/privacy/PrivacyTrust.tsx
-- [ ] T039 [US3] Integrate privacy/trust content into the landing page and contact form acknowledgement in src/features/landing/LandingPage.tsx and src/features/contact/ContactForm.tsx
-- [ ] T040 [US3] Document the verified Resend retention setting, Vercel/Resend processors, and privacy-rights contact channel in docs/privacy-operations.md
+- [X] T037 [US3] Create localized privacy, processor, retention, transfer, and LGPD-rights content in src/features/privacy/privacyContent.ts
+- [X] T038 [US3] Implement accessible privacy/trust section and legal-information links in src/features/privacy/PrivacyTrust.tsx
+- [X] T039 [US3] Integrate privacy/trust content into the landing page and contact form acknowledgement in src/features/landing/LandingPage.tsx and src/features/contact/ContactForm.tsx
+- [X] T040 [US3] Document the verified Resend retention setting, Vercel/Resend processors, and privacy-rights contact channel in docs/privacy-operations.md
 
 **Checkpoint**: User Story 3 makes the data boundary and contact exception clear without weakening
 the browser-local product promise.

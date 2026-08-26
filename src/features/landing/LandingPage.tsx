@@ -6,6 +6,7 @@ import { ContactForm } from '@/features/contact/ContactForm'
 import { ProductDemo } from '@/features/demonstration/ProductDemo'
 import { ProductVisuals } from '@/features/demonstration/ProductVisuals'
 import { Hero } from '@/features/landing/Hero'
+import { PrivacyTrust } from '@/features/privacy/PrivacyTrust'
 
 export function LandingPage() {
   const { t } = useTranslation()
@@ -18,9 +19,7 @@ export function LandingPage() {
         <ProductDemo />
         <ProductVisuals placement="details" />
       </Section>
-      <Section id="privacy" title={t('shell.privacyTitle')}>
-        <Typography color="text.secondary">{t('shell.privacyDescription')}</Typography>
-      </Section>
+      <PrivacyTrust />
       <Section id="contact" title={t('contact.title')}>
         <Typography color="text.secondary">{t('contact.description')}</Typography>
         <ContactForm />

@@ -1,11 +1,11 @@
 <!--
 Sync Impact Report
-- Version change: template (unversioned) -> 1.0.0
-- Modified principles: none; initial constitution established.
-- Added sections: Core Principles, Product and Privacy Constraints, Development Workflow and
-  Quality Gates, and Governance.
+- Version change: 1.0.0 -> 1.1.0
+- Modified principles: III. Privacy by Design and LGPD Compliance expanded with a narrowly scoped
+  contact-form exception.
+- Added sections: none.
 - Removed sections: none.
-- Follow-up TODOs: none.
+- Follow-up TODOs: configure and document contact-data retention and provider settings before release.
 -->
 # EasyDashboard Constitution
 
@@ -34,6 +34,14 @@ Any telemetry MUST be anonymous, minimized, disclosed, and incapable of collecti
 raw dashboard data. Features MUST document their data flow and satisfy LGPD purpose limitation,
 data minimization, transparency, and security requirements.
 
+The sole permitted exception is a voluntary contact form for commercial demonstration requests.
+It MAY transmit only the minimum contact data needed to answer that request to approved processors
+and the EasyDashboard recipient mailbox. It MUST NOT receive dashboard inputs, uploads, derived
+datasets, or chart data. Before release, the form MUST provide a clear privacy notice and lawful
+basis, use server-side validation and abuse controls, avoid application request-body logging, and
+document processors, international transfers, retention, deletion, and LGPD rights. The exception
+does not permit analytics, profiling, or unrelated reuse of contact data.
+
 ### IV. Accessible Mobile-First Experience
 Every interface MUST be designed mobile-first and remain responsive without loss of content or
 functionality across supported viewport sizes. It MUST conform to WCAG 2.1 AA, including
@@ -54,6 +62,10 @@ EasyDashboard is a B2B landing page for a browser-based product that creates cha
 input or uploaded files. Product claims, demonstrations, and UI copy MUST accurately describe
 client-side processing and must not imply that raw customer data is retained, analyzed remotely,
 or shared.
+
+Privacy copy MUST distinguish browser-local dashboard data from voluntary contact-form data. It
+MUST NOT claim that contact data is discarded immediately after sending unless provider and
+recipient-mailbox retention controls are verified and the statement remains accurate.
 
 The page MUST use semantic SEO: one descriptive primary heading, a logical heading hierarchy,
 descriptive links, crawlable content, and meaningful page titles and meta descriptions. Every
@@ -89,4 +101,4 @@ do not change obligations. Every feature specification, plan, task list, pull re
 review MUST include an explicit compliance check against this constitution. Non-compliance requires
 a documented, time-bounded exception approved by maintainers before merge or release.
 
-**Version**: 1.0.0 | **Ratified**: 2026-08-25 | **Last Amended**: 2026-08-25
+**Version**: 1.1.0 | **Ratified**: 2026-08-25 | **Last Amended**: 2026-08-26

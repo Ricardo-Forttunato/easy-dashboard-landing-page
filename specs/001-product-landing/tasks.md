@@ -15,13 +15,13 @@ testable.
 
 **Purpose**: Initialize the Vite React TypeScript application and quality tooling.
 
-- [ ] T001 Initialize the Vite React TypeScript project and scripts in package.json
-- [ ] T002 [P] Configure strict TypeScript and path aliases in tsconfig.json and vite.config.ts
-- [ ] T003 [P] Configure ESLint and Prettier in eslint.config.js and .prettierrc.json
-- [ ] T004 [P] Configure Vitest, jsdom, React Testing Library, and shared test setup in vite.config.ts and src/test/setup.ts
-- [ ] T005 [P] Configure Playwright projects and base test settings in playwright.config.ts
-- [ ] T006 [P] Configure Vercel project behavior, sensitive environment-variable documentation, and build settings in vercel.json and .env.example
-- [ ] T007 Add CI quality workflow for lint, format check, typecheck, unit tests, E2E tests, and build in .github/workflows/ci.yml
+- [X] T001 Initialize the Vite React TypeScript project and scripts in package.json
+- [X] T002 [P] Configure strict TypeScript and path aliases in tsconfig.json and vite.config.ts
+- [X] T003 [P] Configure ESLint and Prettier in eslint.config.js and .prettierrc.json
+- [X] T004 [P] Configure Vitest, jsdom, React Testing Library, and shared test setup in vite.config.ts and src/test/setup.ts
+- [X] T005 [P] Configure Playwright projects and base test settings in playwright.config.ts
+- [X] T006 [P] Configure Vercel project behavior, sensitive environment-variable documentation, and build settings in vercel.json and .env.example
+- [X] T007 Add CI quality workflow for lint, format check, typecheck, unit tests, E2E tests, and build in .github/workflows/ci.yml
 
 ---
 
@@ -91,7 +91,7 @@ using keyboard or assistive technology, with a meaningful non-animated fallback.
 
 ### Implementation for User Story 2
 
-- [ ] T030 [P] [US2] Add descriptively named hero and secondary visual assets in src/assets/
+- [X] T030 [P] [US2] Add descriptively named hero and secondary visual assets in src/assets/
 - [ ] T031 [US2] Create fictional chart data and localized capability copy in src/features/demonstration/demoContent.ts
 - [ ] T032 [US2] Implement accessible input-method explanation, example chart interaction, and reduced-motion fallback in src/features/demonstration/ProductDemo.tsx
 - [ ] T033 [US2] Integrate hero-priority and secondary lazy-loading image policy in src/features/demonstration/ProductVisuals.tsx and src/features/landing/Hero.tsx

@@ -2,6 +2,7 @@ import { Box, Container, Stack, Typography } from '@mui/material'
 import { useTranslation } from 'react-i18next'
 
 import { PrimaryCta } from '@/components/ui/PrimaryCta'
+import { ProductVisuals } from '@/features/demonstration/ProductVisuals'
 
 export function Hero() {
   const { t } = useTranslation()
@@ -33,6 +34,7 @@ export function Hero() {
             {t('hero.privacy')}
           </Typography>
           <PrimaryCta href="#contact">{t('hero.cta')}</PrimaryCta>
+          <ProductVisuals placement="hero" />
         </Stack>
       </Container>
     </Box>

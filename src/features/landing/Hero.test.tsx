@@ -19,6 +19,10 @@ describe('Hero', () => {
       'href',
       '#contact',
     )
+    expect(screen.getByRole('img', { name: /tela principal do EasyDashboard/i })).toHaveAttribute(
+      'fetchpriority',
+      'high',
+    )
   })
 
   it('provides equivalent English content', () => {

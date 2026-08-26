@@ -86,16 +86,16 @@ using keyboard or assistive technology, with a meaningful non-animated fallback.
 
 ### Tests for User Story 2
 
-- [ ] T028 [P] [US2] Write failing component tests for the example chart demonstration, keyboard controls, and reduced-motion behavior in src/features/demonstration/ProductDemo.test.tsx
-- [ ] T029 [P] [US2] Write failing Playwright keyboard and reduced-motion journeys for the demonstration in tests/e2e/demonstration.spec.ts
+- [X] T028 [P] [US2] Write failing component tests for the example chart demonstration, keyboard controls, and reduced-motion behavior in src/features/demonstration/ProductDemo.test.tsx
+- [X] T029 [P] [US2] Write failing Playwright keyboard and reduced-motion journeys for the demonstration in tests/e2e/demonstration.spec.ts
 
 ### Implementation for User Story 2
 
 - [X] T030 [P] [US2] Add descriptively named hero and secondary visual assets in src/assets/
-- [ ] T031 [US2] Create fictional chart data and localized capability copy in src/features/demonstration/demoContent.ts
-- [ ] T032 [US2] Implement accessible input-method explanation, example chart interaction, and reduced-motion fallback in src/features/demonstration/ProductDemo.tsx
-- [ ] T033 [US2] Integrate hero-priority and secondary lazy-loading image policy in src/features/demonstration/ProductVisuals.tsx and src/features/landing/Hero.tsx
-- [ ] T034 [US2] Integrate the demonstration into the landing flow with semantic headings and fallback content in src/features/landing/LandingPage.tsx
+- [X] T031 [US2] Create fictional chart data and localized capability copy in src/features/demonstration/demoContent.ts
+- [X] T032 [US2] Implement accessible input-method explanation, example chart interaction, and reduced-motion fallback in src/features/demonstration/ProductDemo.tsx
+- [X] T033 [US2] Integrate hero-priority and secondary lazy-loading image policy in src/features/demonstration/ProductVisuals.tsx and src/features/landing/Hero.tsx
+- [X] T034 [US2] Integrate the demonstration into the landing flow with semantic headings and fallback content in src/features/landing/LandingPage.tsx
 
 **Checkpoint**: User Story 2 is independently usable with example content and never accepts or
 sends visitor dashboard data.

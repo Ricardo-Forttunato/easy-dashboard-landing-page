@@ -49,7 +49,9 @@ test('CTA and contact request succeed with Tab and Enter', async ({ page }) => {
   await page.getByRole('button', { name: 'Enviar solicitação' }).focus()
   await page.keyboard.press('Enter')
 
-  await expect(page.getByRole('status')).toContainText('Recebemos sua solicitação')
+  await expect(
+    page.getByRole('form', { name: 'Solicitação de demonstração' }).getByRole('status'),
+  ).toContainText('Recebemos sua solicitação')
   expect(submittedBody).toEqual({
     name: 'Ana Silva',
     email: 'ana@example.com',

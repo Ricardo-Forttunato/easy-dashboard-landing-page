@@ -31,6 +31,41 @@ export const pt = {
       contactDescription:
         'O contato comercial será uma jornada separada e solicitará apenas os dados necessários para responder ao seu pedido.',
     },
+    hero: {
+      eyebrow: 'Dashboards B2B no navegador',
+      title: 'Transforme seus dados em gráficos interativos — direto no navegador',
+      description:
+        'Crie gráficos com entrada manual ou arquivos, sem instalar programas ou depender de planilhas complexas.',
+      privacy:
+        'Os dados usados nos gráficos são processados localmente e nunca saem do seu dispositivo.',
+      cta: 'Solicitar uma demonstração',
+    },
+    contact: {
+      title: 'Solicite uma demonstração',
+      description:
+        'Conte brevemente o que você precisa. Usaremos estes dados somente para responder ao seu contato comercial.',
+      formLabel: 'Solicitação de demonstração',
+      name: 'Nome',
+      email: 'E-mail profissional',
+      company: 'Empresa (opcional)',
+      message: 'Como podemos ajudar?',
+      nameError: 'Informe seu nome.',
+      emailError: 'Informe um e-mail válido.',
+      messageError: 'Descreva brevemente como podemos ajudar.',
+      acknowledgementError: 'Confirme que leu o aviso de privacidade.',
+      validationSummary: 'Revise os campos destacados e tente novamente.',
+      noticeTitle: 'Como tratamos os dados deste formulário',
+      notice:
+        'Nome, e-mail, empresa e mensagem serão usados para responder à sua solicitação comercial, com base nos procedimentos preliminares relacionados a um possível contrato realizados a seu pedido. Esses dados serão enviados à Vercel, à Resend e à caixa de entrada da EasyDashboard. Não inclua dados de dashboards, arquivos ou gráficos na mensagem.',
+      rights:
+        'Você pode solicitar acesso, correção ou exclusão pelo e-mail ricardo.forttunato@gmail.com. O tratamento pode envolver transferência internacional e retenção pelos provedores e pela caixa de entrada durante o atendimento.',
+      acknowledgement: 'Li e compreendi como meus dados de contato serão tratados.',
+      website: 'Website',
+      submit: 'Enviar solicitação',
+      submitting: 'Enviando solicitação…',
+      success: 'Recebemos sua solicitação. Entraremos em contato em breve.',
+      failure: 'Não foi possível enviar agora. Revise sua conexão e tente novamente.',
+    },
     actions: {
       requestDemo: 'Solicitar demonstração',
     },

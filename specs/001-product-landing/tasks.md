@@ -57,20 +57,20 @@ complete a keyboard-only valid contact request; invalid input exposes accessible
 
 ### Tests for User Story 1
 
-- [ ] T017 [P] [US1] Write failing behavior tests for hero value proposition, privacy statement, and primary CTA in src/features/landing/Hero.test.tsx
-- [ ] T018 [P] [US1] Write failing validation, status, and keyboard tests for the contact form in src/features/contact/ContactForm.test.tsx
-- [ ] T019 [P] [US1] Write failing request/response contract tests for POST /api/contact in tests/contract/contact-api.test.ts
-- [ ] T020 [P] [US1] Write failing Playwright CTA, contact success/error, and Tab/Enter journey tests in tests/e2e/contact.spec.ts
+- [X] T017 [P] [US1] Write failing behavior tests for hero value proposition, privacy statement, and primary CTA in src/features/landing/Hero.test.tsx
+- [X] T018 [P] [US1] Write failing validation, status, and keyboard tests for the contact form in src/features/contact/ContactForm.test.tsx
+- [X] T019 [P] [US1] Write failing request/response contract tests for POST /api/contact in tests/contract/contact-api.test.ts
+- [X] T020 [P] [US1] Write failing Playwright CTA, contact success/error, and Tab/Enter journey tests in tests/e2e/contact.spec.ts
 
 ### Implementation for User Story 1
 
-- [ ] T021 [US1] Implement localized hero content and above-the-fold CTA in src/features/landing/Hero.tsx
-- [ ] T022 [US1] Define shared client and server Zod contact schema with field limits and honeypot handling in src/features/contact/contactSchema.ts
-- [ ] T023 [US1] Implement accessible contact form states, validation messages, privacy acknowledgement, and duplicate-submit prevention in src/features/contact/ContactForm.tsx
-- [ ] T024 [US1] Implement the contact request client with generic failure handling and no data persistence in src/features/contact/contactClient.ts
-- [ ] T025 [US1] Implement POST-only Vercel contact Function with server validation, anti-abuse boundary, no body logging, and Resend delivery in api/contact.ts
-- [ ] T026 [US1] Integrate hero CTA, contact dialog/section, and status announcements in src/features/landing/LandingPage.tsx
-- [ ] T027 [US1] Add verified sending-domain, sensitive-key, recipient, reply-to, and privacy-notice setup instructions in README.md and .env.example
+- [X] T021 [US1] Implement localized hero content and above-the-fold CTA in src/features/landing/Hero.tsx
+- [X] T022 [US1] Define shared client and server Zod contact schema with field limits and honeypot handling in src/features/contact/contactSchema.ts
+- [X] T023 [US1] Implement accessible contact form states, validation messages, privacy acknowledgement, and duplicate-submit prevention in src/features/contact/ContactForm.tsx
+- [X] T024 [US1] Implement the contact request client with generic failure handling and no data persistence in src/features/contact/contactClient.ts
+- [X] T025 [US1] Implement POST-only Vercel contact Function with server validation, anti-abuse boundary, no body logging, and Resend delivery in api/contact.ts
+- [X] T026 [US1] Integrate hero CTA, contact dialog/section, and status announcements in src/features/landing/LandingPage.tsx
+- [X] T027 [US1] Add verified sending-domain, sensitive-key, recipient, reply-to, and privacy-notice setup instructions in README.md and .env.example
 
 **Checkpoint**: User Story 1 is independently demonstrable without the interactive product demo.
 

@@ -33,6 +33,40 @@ export const en = {
       contactDescription:
         'Commercial contact will be a separate journey and will request only the data needed to answer you.',
     },
+    hero: {
+      eyebrow: 'Browser-based B2B dashboards',
+      title: 'Turn your data into interactive charts — directly in your browser',
+      description:
+        'Create charts from manual input or files, with no software installation or complex spreadsheets.',
+      privacy: 'The data used in your charts is processed locally and never leaves your device.',
+      cta: 'Request a demonstration',
+    },
+    contact: {
+      title: 'Request a demonstration',
+      description:
+        'Briefly tell us what you need. We will use this data only to respond to your commercial enquiry.',
+      formLabel: 'Demonstration request',
+      name: 'Name',
+      email: 'Work email',
+      company: 'Company (optional)',
+      message: 'How can we help?',
+      nameError: 'Enter your name.',
+      emailError: 'Enter a valid email address.',
+      messageError: 'Briefly describe how we can help.',
+      acknowledgementError: 'Confirm that you have read the privacy notice.',
+      validationSummary: 'Review the highlighted fields and try again.',
+      noticeTitle: 'How we handle the data in this form',
+      notice:
+        'Your name, email, company, and message will be used to respond to your commercial enquiry, based on pre-contractual steps taken at your request. This data will be sent to Vercel, Resend, and the EasyDashboard mailbox. Do not include dashboard, file, or chart data in the message.',
+      rights:
+        'You may request access, correction, or deletion at ricardo.forttunato@gmail.com. Processing may involve international transfers and retention by the providers and mailbox while your enquiry is handled.',
+      acknowledgement: 'I have read and understood how my contact data will be handled.',
+      website: 'Website',
+      submit: 'Send request',
+      submitting: 'Sending request…',
+      success: 'We received your request. We will contact you soon.',
+      failure: 'We could not send your request. Check your connection and try again.',
+    },
     actions: {
       requestDemo: 'Request a demonstration',
     },

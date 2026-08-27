@@ -4,6 +4,7 @@ import {
   FormControl,
   FormControlLabel,
   FormHelperText,
+  Link,
   Stack,
   TextField,
   Typography,
@@ -15,6 +16,8 @@ import { PrimaryCta } from '@/components/ui/PrimaryCta'
 import { StatusMessage } from '@/components/ui/StatusMessage'
 import { submitContactRequest } from '@/features/contact/contactClient'
 import { contactRequestSchema, type ContactRequest } from '@/features/contact/contactSchema'
+import { privacyContent } from '@/features/privacy/privacyContent'
+import { normalizeLanguage } from '@/locales/i18n'
 
 type ContactField = 'name' | 'email' | 'message' | 'privacyAcknowledged'
 
@@ -23,7 +26,9 @@ interface ContactFormProps {
 }
 
 export function ContactForm({ submitRequest = submitContactRequest }: ContactFormProps) {
-  const { t } = useTranslation()
+  const { i18n, t } = useTranslation()
+  const language = normalizeLanguage(i18n.resolvedLanguage ?? i18n.language)
+  const privacy = privacyContent[language].form
   const formRef = useRef<HTMLFormElement>(null)
   const submittingRef = useRef(false)
   const [formVersion, setFormVersion] = useState(0)
@@ -139,20 +144,27 @@ export function ContactForm({ submitRequest = submitContactRequest }: ContactFor
           helperText={errors.message}
         />
 
-        <Box sx={{ p: 2.5, border: 1, borderColor: 'divider', borderRadius: 2 }}>
-          <Typography component="h3" variant="h6" gutterBottom>
-            {t('contact.noticeTitle')}
+        <Box
+          id="contact-privacy-notice"
+          aria-labelledby="contact-privacy-notice-title"
+          sx={{ p: 2.5, border: 1, borderColor: 'divider', borderRadius: 2 }}
+        >
+          <Typography id="contact-privacy-notice-title" component="h3" variant="h6" gutterBottom>
+            {privacy.title}
           </Typography>
-          <Typography color="text.secondary">{t('contact.notice')}</Typography>
+          <Typography color="text.secondary">{privacy.summary}</Typography>
           <Typography color="text.secondary" sx={{ mt: 1.5 }}>
-            {t('contact.rights')}
+            {privacy.rights}
           </Typography>
+          <Link href="#privacy-details" sx={{ display: 'inline-block', mt: 1.5 }}>
+            {privacy.detailsLink}
+          </Link>
         </Box>
 
         <FormControl required error={Boolean(errors.privacyAcknowledged)}>
           <FormControlLabel
             control={<Checkbox name="privacyAcknowledged" />}
-            label={t('contact.acknowledgement')}
+            label={privacy.acknowledgement}
           />
           {errors.privacyAcknowledged ? (
             <FormHelperText>{errors.privacyAcknowledged}</FormHelperText>
